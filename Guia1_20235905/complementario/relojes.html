@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Cronos Collection - Pasión por la Horología</title>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-gold: #D4AF37;
+            --color-dark-blue: #0F172A;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800">
+
+    <header class="bg-dark-blue text-white">
+        <nav class="max-w-6xl mx-auto p-6 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-widest text-gold uppercase">Cronos</div>
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-wide">
+                <a href="#coleccion" class="hover:text-gold transition">Colección</a>
+                <a href="#historia" class="hover:text-gold transition">Historia</a>
+                <a href="#contacto" class="hover:text-gold transition">Contacto</a>
+            </div>
+        </nav>
+
+        <div class="max-w-4xl mx-auto text-center py-20 px-6">
+            <h1 class="text-4xl md:text-6xl font-serif font-bold mb-6">El tiempo es el verdadero lujo</h1>
+            <p class="text-lg md:text-xl text-slate-400 mb-10">Explora una selección curada de piezas de ingeniería suiza y japonesa.</p>
+            <a href="#coleccion" class="inline-block px-8 py-3 border border-gold text-gold hover:bg-gold hover:text-dark-blue transition duration-300 uppercase tracking-widest text-sm">Ver Catálogo</a>
+        </div>
+    </header>
+
+    <section id="coleccion" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 uppercase tracking-wider">Nuestra Colección</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-2xl transition duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="../images/Tissot.jpg" alt="Tissot PRX" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Tissot PRX Powermatic</h3>
+                        <p class="text-gray-500 text-sm mb-4">Acero inoxidable, cristal de zafiro y movimiento automático suizo.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gold font-bold text-lg">$650</span>
+                            <button class="text-sm uppercase font-bold text-dark-blue hover:underline">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-2xl transition duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="../images/Bulova.jpg" alt="Bulova Lunar Pilot" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Bulova Lunar Pilot</h3>
+                        <p class="text-gray-500 text-sm mb-4">El cronógrafo de alto rendimiento que hizo historia en el espacio.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gold font-bold text-lg">$525</span>
+                            <button class="text-sm uppercase font-bold text-dark-blue hover:underline">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-2xl transition duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="../images/Seiko.jpg" alt="Seiko 5 Sports" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Seiko 5 Sports</h3>
+                        <p class="text-gray-500 text-sm mb-4">Versatilidad y resistencia japonesa. El compañero diario perfecto.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gold font-bold text-lg">$295</span>
+                            <button class="text-sm uppercase font-bold text-dark-blue hover:underline">Detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="historia" class="bg-slate-100 py-20 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-6">Más que máquinas, legados.</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Desde 2026, nos dedicamos a conectar a entusiastas con piezas que cuentan historias. No vendemos solo instrumentos para medir el tiempo, vendemos ingeniería, arte y tradición.
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-center"><span class="text-gold mr-2">✓</span> Distribuidores Autorizados</li>
+                    <li class="flex items-center"><span class="text-gold mr-2">✓</span> Garantía Internacional</li>
+                    <li class="flex items-center"><span class="text-gold mr-2">✓</span> Servicio Técnico Especializado</li>
+                </ul>
+            </div>
+            <div class="md:w-1/2 bg-dark-blue h-80 w-full rounded-xl flex items-center justify-center shadow-xl transform rotate-2 hover:rotate-0 transition duration-500">
+                <span class="text-white text-6xl">🛠️</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="bg-dark-blue text-white py-20 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Únete al Club</h2>
+            <p class="text-slate-400 mb-8">Recibe noticias sobre lanzamientos exclusivos y ofertas especiales.</p>
+            <form class="flex flex-col md:flex-row gap-4">
+                <input type="email" placeholder="Tu correo electrónico" class="flex-1 px-6 py-3 rounded-full text-slate-900 focus:outline-none focus:ring-2 focus:ring-gold">
+                <button type="submit" class="px-8 py-3 bg-gold text-dark-blue font-bold rounded-full hover:bg-white transition duration-300">Suscribirse</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-500 py-8 text-center text-sm">
+        <p>&copy; 2026 Cronos Collection. Diseñado por [Tu Nombre] - Carné: [Tu Carné]</p>
+    </footer>
+
+</body>
+</html>

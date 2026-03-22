@@ -1,0 +1,51 @@
+"use client";
+import { useActionState } from "react";
+import { useFormStatus } from "react-dom";
+import { crearReserva } from "@/app/actions/reservas";
+import { input, label, botonPrimario } from "@/app/lib/estilos";
+import type { Servicio } from "@prisma/client";
+
+const estadoInicial = { errores: {} as Record<string, string[]>, mensaje: "" };
+
+function BotonEnviar() {
+    const { pending } = useFormStatus();
+    return (
+        <button type="submit" disabled={pending} className={botonPrimario}>
+            {pending ? "Guardando..." : "Confirmar reserva"}
+        </button>
+    );
+}
+
+export function FormularioReserva({ servicios }: { servicios: Servicio[] }) {
+    const [estado, accion] = useActionState(crearReserva, estadoInicial);
+
+    return (
+        <form action={accion} className="space-y-5">
+            <div>
+                <label className={label}>Nombre</label>
+                <input name="nombre" type="text" className={input} required />
+            </div>
+            <div>
+                <label className={label}>Correo</label>
+                <input name="correo" type="email" className={input} required />
+            </div>
+            <div>
+                <label className={label}>Fecha y hora</label>
+                <input name="fecha" type="datetime-local" className={input} required />
+            </div>
+            <div>
+                <label className={label}>Servicio</label>
+                <select name="servicioId" className={input} required>
+                    <option value="">Seleccione un servicio</option>
+                    {servicios.map((s) => (
+                        <option key={s.id} value={s.id}>
+                            {s.nombre} ({s.duracion} min)
+                        </option>
+                    ))}
+                </select>
+            </div>
+            <BotonEnviar />
+            {estado.mensaje && <p className="text-sm text-red-500 mt-2">{estado.mensaje}</p>}
+        </form>
+    );
+}
